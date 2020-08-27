@@ -8,7 +8,7 @@ class ElasticsearchCookbook::UserProvider < Chef::Provider::LWRPBase
     true # we only use core Chef resources that also support whyrun
   end
 
-  action :action_create do
+  def action_create
     group_r = group new_resource.groupname do
       gid new_resource.gid
       action :nothing
@@ -31,7 +31,7 @@ class ElasticsearchCookbook::UserProvider < Chef::Provider::LWRPBase
     new_resource.updated_by_last_action(true) if user_r.updated_by_last_action?
   end
 
-  action :action_remove do
+  def action_remove
     # delete user before deleting the group
     user_r = user new_resource.username do
       action :nothing

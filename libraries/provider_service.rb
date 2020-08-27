@@ -7,11 +7,11 @@ class ElasticsearchCookbook::ServiceProvider < Chef::Provider::LWRPBase
     true # we only use core Chef resources that also support whyrun
   end
 
-  action :action_remove do
+  def action_remove
     raise "#{new_resource} remove not currently implemented"
   end
 
-  action :action_configure do
+  def action_configure
     es_user = find_es_resource(Chef.run_context, :elasticsearch_user, new_resource)
     es_install = find_es_resource(Chef.run_context, :elasticsearch_install, new_resource)
     es_conf = find_es_resource(Chef.run_context, :elasticsearch_configure, new_resource)
@@ -99,27 +99,27 @@ class ElasticsearchCookbook::ServiceProvider < Chef::Provider::LWRPBase
 
   # Passthrough actions to service[service_name]
   #
-  action :action_enable do
+  def action_enable
     passthrough_action(:enable)
   end
 
-  action :action_disable do
+  def action_disable
     passthrough_action(:disable)
   end
 
-  action :action_start do
+  def action_start
     passthrough_action(:start)
   end
 
-  action :action_stop do
+  def action_stop
     passthrough_action(:stop)
   end
 
-  action :action_restart do
+  def action_restart
     passthrough_action(:restart)
   end
 
-  action :action_status
+  def action_status
     passthrough_action(:status)
   end
 

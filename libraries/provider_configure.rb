@@ -8,7 +8,7 @@ class ElasticsearchCookbook::ConfigureProvider < Chef::Provider::LWRPBase
     true # we only use core Chef resources that also support whyrun
   end
 
-  action :action_manage do
+  def action_manage
     # lookup existing ES resources
     es_user = find_es_resource(Chef.run_context, :elasticsearch_user, new_resource)
     es_svc = find_es_resource(Chef.run_context, :elasticsearch_service, new_resource)
