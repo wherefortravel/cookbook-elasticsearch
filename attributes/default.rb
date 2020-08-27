@@ -211,3 +211,40 @@ default['elasticsearch']['checksums']['7.5.0']['tarball'] = '1e183717071e329591c
 default['elasticsearch']['checksums']['7.5.1']['debian'] = 'e566a88e15d8f85cf793c8f971b51eeae6465a0aa73f968ae4b1ee6aa71e4c20'
 default['elasticsearch']['checksums']['7.5.1']['rhel'] = 'e6202bba2bd8644d23dcbef9ad7780c847dfe4ee699d3dc1804f6f62eed59c2d'
 default['elasticsearch']['checksums']['7.5.1']['tarball'] = '37c317efaacf33a1bae250a59e822864750fddd8caf08c4b6a6c235ffa5f47e8'
+
+default['elasticsearch']['checksums']['7.5.2']['debian'] = '4d5d2aa01a29bab054dd67a7c39d330d5c3844aa686846a8bd9ddf841834f485'
+default['elasticsearch']['checksums']['7.5.2']['rhel'] = 'bf34b74295be1768e456d4c9b5431d6e4caac64afb92afef686fa4228e4a5c57'
+default['elasticsearch']['checksums']['7.5.2']['tarball'] = '7b49b5ad9fea43533fc0355708b0fad7651aa0215fd590ed1414c2ff44e4cdf3'
+
+default['elasticsearch']['checksums']['7.6.0']['debian'] = '0ee359891e7fabf8db7b9d797c806fcfdf830898b2e5656ab1185c6fe8e6001f'
+default['elasticsearch']['checksums']['7.6.0']['rhel'] = '97fcaa3c7a177027cb50c22cc4c7bb84efb5d22020252c64c9bf6d8e22185364'
+default['elasticsearch']['checksums']['7.6.0']['tarball'] = 'bba7b582a1efcfb870a2aacbceb5036f577fb5bfb9b481b2426177d25c21b595'
+
+default['elasticsearch']['checksums']['7.6.1']['debian'] = '68a7a76f9a0e45282b737409a6847f51e55eb586963eeb8a9a2450123b884371'
+default['elasticsearch']['checksums']['7.6.1']['rhel'] = 'cee0dff1a33739dbfc75e51111b62bfae1767016d8772b845f46426890ff0dbd'
+default['elasticsearch']['checksums']['7.6.1']['tarball'] = '25583ddd44a99437958f7f9410cd9746c8230b367d570cdf69e96824a583748a'
+
+default['elasticsearch']['checksums']['7.6.2']['debian'] = '6ef2b0ed7844ed70d739216570b9479642b962c0e042ce24a02af0e3f5f6ced8'
+default['elasticsearch']['checksums']['7.6.2']['rhel'] = 'e244dc4dde8024caf09f9b93538ee6b43b4c823a069905ad993a38bba2b35e56'
+default['elasticsearch']['checksums']['7.6.2']['tarball'] = '63543cfafbb2b1eae39dc38052acc75dc4ca2e1579259a1c47722116e31af577'
+
+default['elasticsearch']['checksums']['7.7.0']['debian'] = '59ab3ab8e65f17b5a2c232cfe4783ffb8a77ccb46b7dc22a39ba8d8d6506fac7'
+default['elasticsearch']['checksums']['7.7.0']['rhel'] = 'd3eeba78555d953d155dd483008c266770b162075419aed83573976e693548a5'
+default['elasticsearch']['checksums']['7.7.0']['tarball'] = '428e24d0ab47ad6a68a9cd085304edf1ea06dbaf38982d27c9d65e90f61064a5'
+
+default['elasticsearch']['checksums']['7.7.1']['debian'] = 'ebdf5700adac865a52bc23028e5bbfa75c71caca2c32c6183be67dd74a9f02f4'
+default['elasticsearch']['checksums']['7.7.1']['rhel'] = '89da351ea1c1d362b0f923ae378568301b63c0f3b14f7f0b2879aa82daad54fe'
+default['elasticsearch']['checksums']['7.7.1']['tarball'] = '8bec20dc4b2fee3ac0b60794c2cebc4eb98b2ef9d2eef655a69172e05ce546ca'
+
+default['elasticsearch']['checksums']['7.8.0']['debian'] = '608bf8a5401021b4daf068dde00350e0712993935912caed63f7aa1d016f8158'
+default['elasticsearch']['checksums']['7.8.0']['rhel'] = '164c7c9e5e373e8902a2654ed6b44ec92f1a587f94ce687431fe4d1b0bb4648e'
+default['elasticsearch']['checksums']['7.8.0']['tarball'] = '24df9d4c206723e70d5da1647e44ab2de3a722e101cba414132ad93f5cf9c3ef'
+
+default['elasticsearch']['checksums']['7.8.1']['debian'] = '25114ebeb7523b0745e25100814edabf6b42dfe5350b590e14980ccbc77d48f3'
+default['elasticsearch']['checksums']['7.8.1']['rhel'] = '4522014717be362d81b45404ff209b86457d79227260b041c661ce1815c8af32'
+default['elasticsearch']['checksums']['7.8.1']['tarball'] = '4f7336d191f8131787fe276dffd184e4bce97f7363285ee8dd37c7abd6a6861f'
+
+default['elasticsearch']['checksums']['7.9.0']['debian'] = 'a29228b75f1e8fa2513460faecab58ebecf25cc08177a20054f5cdcb896d4864'
+default['elasticsearch']['checksums']['7.9.0']['rhel'] = '65df22aef06b1a97d557811b25612ec1920c03b209f553f280fb82e7f1e4a3e1'
+default['elasticsearch']['checksums']['7.9.0']['tarball'] = '9f8ce7308cd0d0c691b0bd5b43716cf58e40f2cd54a7f4c36e9188aca199a379'
+
