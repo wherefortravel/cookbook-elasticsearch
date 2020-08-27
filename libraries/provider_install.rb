@@ -9,7 +9,7 @@ class ElasticsearchCookbook::InstallProvider < Chef::Provider::LWRPBase
     true # we only use core Chef resources that also support whyrun
   end
 
-  def action_install
+  action :action_install do
     if new_resource.type == 'tarball'
       install_tarball_wrapper_action
     elsif new_resource.type == 'package'
@@ -21,7 +21,7 @@ class ElasticsearchCookbook::InstallProvider < Chef::Provider::LWRPBase
     end
   end
 
-  def action_remove
+  action :action_remove do
     if new_resource.type == 'tarball'
       remove_tarball_wrapper_action
     elsif new_resource.type == 'package'
@@ -35,7 +35,7 @@ class ElasticsearchCookbook::InstallProvider < Chef::Provider::LWRPBase
 
   protected
 
-  def install_repo_wrapper_action
+  action :install_repo_wrapper_action do
     es_user = find_es_resource(Chef.run_context, :elasticsearch_user, new_resource)
     unless es_user && es_user.username == 'elasticsearch' && es_user.groupname == 'elasticsearch'
       raise 'Custom usernames/group names is not supported in Elasticsearch 6+ repository installation'
@@ -69,7 +69,7 @@ class ElasticsearchCookbook::InstallProvider < Chef::Provider::LWRPBase
     new_resource.updated_by_last_action(true) if pkg_r.updated_by_last_action?
   end
 
-  def remove_repo_wrapper_action
+  action :remove_repo_wrapper_action do
     if new_resource.enable_repository_actions
       if node['platform_family'] == 'debian'
         apt_r = apt_repo_resource
@@ -91,7 +91,7 @@ class ElasticsearchCookbook::InstallProvider < Chef::Provider::LWRPBase
     new_resource.updated_by_last_action(true) if pkg_r.updated_by_last_action?
   end
 
-  def install_package_wrapper_action
+  action :install_package_wrapper_action do
     es_user = find_es_resource(Chef.run_context, :elasticsearch_user, new_resource)
     unless es_user && es_user.username == 'elasticsearch' && es_user.groupname == 'elasticsearch'
       raise 'Custom usernames/group names is not supported in Elasticsearch 6+ package installation'
@@ -135,7 +135,7 @@ class ElasticsearchCookbook::InstallProvider < Chef::Provider::LWRPBase
     new_resource.updated_by_last_action(true) if pkg_r.updated_by_last_action?
   end
 
-  def remove_package_wrapper_action
+  action :remove_package_wrapper_action do
     package_url = determine_download_url(new_resource, node)
     filename = package_url.split('/').last
 
@@ -153,7 +153,7 @@ class ElasticsearchCookbook::InstallProvider < Chef::Provider::LWRPBase
     new_resource.updated_by_last_action(true) if pkg_r.updated_by_last_action?
   end
 
-  def install_tarball_wrapper_action
+  action :install_tarball_wrapper_action do
     include_recipe 'ark'
 
     es_user = find_es_resource(Chef.run_context, :elasticsearch_user, new_resource)
